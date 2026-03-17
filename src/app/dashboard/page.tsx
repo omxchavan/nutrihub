@@ -40,7 +40,7 @@ export default async function DashboardPage() {
     const noMeals = logs.length === 0;
 
     return (
-        <div className="min-h-dvh pt-24 pb-32 px-4 md:px-8 max-w-7xl mx-auto space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-1000">
+        <div className="min-h-dvh pt-24 pb-48 px-4 md:px-8 max-w-7xl mx-auto space-y-10 animate-in fade-in slide-in-from-bottom-4 duration-1000">
             <div className="flex items-center justify-between">
                 <div>
                     <h1 className="text-3xl font-bold text-slate-800">Hello, Chief</h1>

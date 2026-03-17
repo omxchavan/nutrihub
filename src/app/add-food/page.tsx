@@ -63,7 +63,7 @@ export default function AddFoodPage() {
     };
 
     return (
-        <div className="min-h-dvh pt-24 pb-12 px-6 flex flex-col items-center relative overflow-hidden">
+        <div className="min-h-dvh pt-24 pb-48 px-6 flex flex-col items-center relative overflow-hidden">
             <AnimatePresence mode="wait">
                 {!analysisResult ? (
                     <motion.div
@@ -153,6 +153,7 @@ export default function AddFoodPage() {
                                         ref={fileInputRef}
                                         onChange={handleImageUpload}
                                         accept="image/*"
+                                        capture="environment"
                                         className="hidden"
                                     />
                                     {previewImage && (

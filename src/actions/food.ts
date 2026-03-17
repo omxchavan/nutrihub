@@ -41,15 +41,16 @@ export async function analyzeFood({
         let responseText = "";
 
         if (imageBase64) {
-            // Assuming imageBase64 is strictly the base64 string without data:image/jpeg;base64, prefix
-            // we remove the prefix on the client side just to be safe
-            const base64Data = imageBase64.split(",")[1] || imageBase64;
+            const mimeTypeMatch = imageBase64.match(/^data:([^;]+);base64,/);
+            const mimeType = mimeTypeMatch ? mimeTypeMatch[1] : "image/jpeg";
+            const base64Data = imageBase64.includes(",") ? imageBase64.split(",")[1] : imageBase64;
+            
             const result = await model.generateContent([
                 prompt,
                 {
                     inlineData: {
                         data: base64Data,
-                        mimeType: "image/jpeg",
+                        mimeType: mimeType,
                     },
                 },
             ]);

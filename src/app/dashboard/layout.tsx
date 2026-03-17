@@ -16,7 +16,7 @@ export default async function DashboardLayout({
     }
 
     return (
-        <div className="min-h-screen pt-24 pb-12 relative overflow-hidden">
+        <div className="min-h-screen pt-24 pb-48 relative overflow-hidden">
             {/* Dashboard Ambient Glow removed for clean UI */}
 
             <Navbar />

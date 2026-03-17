@@ -90,7 +90,7 @@ export default function ReportsPage() {
     };
 
     return (
-        <div className="h-[100dvh] pt-20 md:pt-24 pb-24 md:pb-12 px-4 md:px-6 flex flex-col">
+        <div className="h-[100dvh] pt-20 md:pt-24 pb-48 md:pb-12 px-4 md:px-6 flex flex-col">
             <div className="max-w-4xl mx-auto w-full flex flex-col h-full space-y-3 md:space-y-4 overflow-hidden">
 
                 {/* Header */}
